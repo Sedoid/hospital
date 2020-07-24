@@ -39,7 +39,7 @@ exports
 
     jsonFile.writeFileSync(path.join(__dirname, "../", "users.json"), data);
 
-    res.render("userpage",user);
+    res.render("user/profile",user);
   } else
     res.render("login", {
       message: "user not found",

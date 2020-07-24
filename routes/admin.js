@@ -2,8 +2,6 @@ const express = require('express');
 const auth = require('../controlers/auth');
 const formidable = require('formidable');
 const {getAll,getById} = require('../controlers/admin');
-
-
 const form = formidable({ multiples: true });
 const router = express.Router();
 

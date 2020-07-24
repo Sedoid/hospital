@@ -56,8 +56,12 @@ router.post("/register", (req, res) => {
 router.get("/profile", (req, res) => {
   if (req.user) {
     console.log(req.user);
-    res.send("display the users page");
+    res.render("user/profile");
   } else res.render("login");
 });
+
+router.get('/logs',(req, res)=>{
+  res.render('user/logs')
+})
 
 module.exports = router;

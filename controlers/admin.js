@@ -26,6 +26,14 @@ getById = async(id,res) =>{
     })
 }
 
+//Get By ID
+exports.
+getAllData = async(res) =>{
+    Patient.find({},(err,result)=>{
+        res.json(result)
+    })
+}
+
 
 
 //ADMIN ADD PATIENT

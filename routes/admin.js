@@ -1,7 +1,7 @@
 const express = require('express');
 const auth = require('../controlers/auth');
 const formidable = require('formidable');
-const {getAll,getById} = require('../controlers/admin');
+const {getAll,getAllData,getById} = require('../controlers/admin');
 const form = formidable({ multiples: true });
 const router = express.Router();
 
@@ -48,7 +48,7 @@ router.use(express.json())
     console.log('Getting all ');
     console.log(req.user)
     if (req.user){
-        getAll(res);
+        getAllData(res);
     }else
     res.render('adminlogin');     
 
@@ -82,3 +82,15 @@ router.use(express.json())
 
 
    module.exports = router
+
+//    {
+    //    "_id":{"$oid":"5f1bf356d2cdbb1d4bd8c458"},
+    //    "disease":[],
+    //    "date":"Sat Jul 25 2020 04:53:24 GMT-0400 (Eastern Daylight Time)",
+    //    "name":"thie",
+    //    "email":"sehho@gmail.com",
+    //    "age":{"$numberInt":"87"},
+    //    "password":"GfDc8nIGrBW9GpwHjsxxqPTsPaNncXOXy9naGqleRj0=",
+    //    "image_url":"profilePic/unnamed.jpg",
+    //    "qrcode_url":"qrcode/sehho@gmail.com.png",
+    //    "logs":[{"date":"Sat Jul 25 2020 04:53:24 GMT-0400 (Eastern Daylight Time)","test":[null],"medicine":[null],"_id":{"$oid":"5f1bf356d2cdbb1d4bd8c459"}}],"__v":{"$numberInt":"0"}}

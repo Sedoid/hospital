@@ -58,10 +58,10 @@ router.use(express.json())
        
        let id = req.params.id;
     //    let sample = 'YQXWzHavQAMl6U1YjOURvlv9u3O0N9xR7KQ5F9ekPj0=';
-       if (req.user){
+    //    if (req.user){
             getById(id,res)
-       }else
-            res.render('adminlogin');      
+    //    }else
+    // res.render('adminlogin');      
    });
 
    router.post('/add',( req, res )=>{

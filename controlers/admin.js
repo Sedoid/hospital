@@ -22,7 +22,7 @@ getAll = async(res)=>{
 exports.
 getById = async(id,res) =>{
     Patient.find({_id: id},(err,result)=>{
-        res.json(result)
+        res.send(JSON.stringify(result))
     })
 }
 
